@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    section{
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        background:skyblue;
+        background-size: cover;
+        background-position: center;
+    }
+    header{
+        position: relative;
+        top: 0;
+        width: 100%;
+        padding: 20px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .logo{
+        position: relative;
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: black;
+        text-transform: uppercase;
+        }
+    header .navi a{
+        color: black;
+        background: forestgreen;
+        font-weight: 500;
+        padding: 2px 20px;
+        border-radius: 20px;
+    }
+    .com{
+        width: 700px;
+        margin: 60px 120px;
+    }
+    .com .info h2{
+        color: green;
+        font-size: 47px;
+        text-transform: uppercase;
+        line-height: 50px;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+    .com .info h2 span{
+        color: purple;
+        font-size: 47px;
+    }
+    .com .info p{
+        font-size: 18px;
+        font-weight: 500;
+        font-style: italic;
+        margin-bottom: 50px;
+    }
+    .com .info-btn{
+        color: white;
+        background: brown;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        letter-spacing: 2px;
+    }
+    .com .info-btn:hover{
+        opacity: 0.5;
+    } 
+</style>
+<body>
+<section>
+<header>
+    <h2><a href="#" class="logo">LOGO</a></h2>
+    <div class="navi">
+        <a href="#" >Home</a>
+        <a href="#">About</a>
+        <a href="#">Info</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+</header>
+
+    <div class="com">
+        <div class="info">
+        <h2>Like Nature <br><span>Be Awesome !</span></h2>
+        <p>"very morning was a cheerful invitation to make my life of equal simplicity, and I may say innocence, with Nature herself,Fresh air is as good for the mind as for the body. Nature always seems trying to talk to us as if she had some great secret to tell. And so she has,When you do something noble and beautiful and nobody noticed, do not be sad. For the sun every morning is a beautiful spectacle and yet most of the audience still sleeps,Whoever you are, no matter how lonely, the world offers itself to your imagination, calls to you like the wild geese, harsh and exciting—over and over announcing your place in the family of things,May your trails be crooked, winding, lonesome, dangerous, leading to the most amazing view. May your mountains rise into and above the clouds. May your rivers flow without end…"</p>
+        <a href="https://en.wikipedia.org/wiki/Nature" class="info-btn">More Info</a>
+        </div>
+    </div>
+</section>
+</body>
+</html>

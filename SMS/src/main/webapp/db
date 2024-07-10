@@ -1,0 +1,202 @@
+conn system/SYS6444
+
+drop user sms cascade;
+
+create user sms identified by sms;
+
+grant dba to sms;
+
+conn sms/sms
+
+
+create table admin
+(
+	emailid varchar2(50),
+	password varchar2(50),
+	otp varchar2(10)
+);
+	
+	
+	
+	insert into admin(emailid,password) values('admin@gmail.com','admin');
+	
+	
+	commit;
+	
+create table student
+(
+	 emailid varchar2(50) primary key,
+	 password varchar2(50),
+	 otp varchar2(10),
+	 status varchar2(10),
+	 name varchar2(50),
+	 regdno varchar2(10),
+	 branch varchar2(50),
+	 dob varchar2(15),
+	 gender varchar2(10),
+	 bloodgroup varchar2(5),
+	 mobileno varchar2(12),
+	 adhaarno varchar2(20),
+	 ssession varchar2(15),
+	 semester varchar2(20),
+	 permanent_landmark varchar2(50),
+     permanent_city varchar2(50),
+	 permanent_district varchar2(50),
+	 permanent_state varchar2(50),
+	 permanent_pincode varchar2(10),
+	 permanent_country varchar2(50),
+	 present_country varchar2(50),
+	 present_landmark varchar2(50),
+	 present_city varchar2(50),
+	 present_district varchar(50),
+	 present_state varchar(50),
+	 present_pincode varchar2(10),
+	 fname varchar2(50),
+	 mname varchar2(50),
+	 photo varchar2(50)
+);
+
+create table teacher
+(
+	 emailid varchar2(50) primary key,
+	 password varchar2(50),	
+	 otp varchar2(10),
+	 status varchar2(10),
+	 name varchar2(50),
+	 fname varchar2(50),
+	 mname varchar2(50),
+	 regdno varchar2(10),
+	 joindate varchar2(20),
+	 dob varchar2(15),
+	 gender varchar2(10),
+	 bloodgroup varchar2(5),
+	 mobileno varchar2(12),
+	 adhaarno varchar2(20),
+	 department varchar2(50),
+	 qualification varchar2(30),
+	 permanent_landmark varchar2(50),
+     permanent_city varchar2(50),
+	 permanent_district varchar2(50),
+	 permanent_state varchar2(50),
+	 permanent_pincode varchar2(10),
+	 permanent_country varchar2(50),
+	 present_country varchar2(50),
+	 present_landmark varchar2(50),
+	 present_city varchar2(50),
+	 present_district varchar(50),
+	 present_state varchar(50),
+	 present_pincode varchar2(10),
+	 photo varchar2(50)
+);
+
+
+---------------------
+
+create table studentfeedback
+(
+	regdno varchar2(20),
+	emailid varchar2(50),
+	message varchar2(150)
+);
+
+create table teacherfeedback
+(
+	regdno varchar2(20),
+	emailid varchar2(50),
+	message varchar2(150)
+);
+
+create table contact
+(
+ name varchar2(50),
+ emailid varchar2(50),
+ message varchar2(200)
+);
+
+
+create table studentleave
+(
+  regdno varchar2(10),
+  emailid varchar2(50),
+  t varchar2(10),
+  f varchar2(10),
+  message varchar2(200),
+  status varchar2(2)
+);
+-----------------------------
+create table teacherleave
+(
+  regdno varchar2(10),
+  emailid varchar2(50),
+  t varchar2(10),
+  f varchar2(10),
+  message varchar2(200),
+  status varchar2(2)
+);
+
+
+
+
+--------------------------------
+create table studentattendance
+(
+	attendancedate varchar2(50),
+	branch varchar2(50),
+	semester varchar2(50),
+	subject varchar2(50),
+	emailid varchar2(50),
+	regdno varchar2(50),
+	status varchar2(4),
+	name varchar2(50)
+);
+
+create table teacherattendance
+(
+	attendancedate varchar2(50),
+	branch varchar2(50),
+	semester varchar2(50),
+	subject varchar2(50),
+	emailid varchar2(50),
+	regdno varchar2(50),
+	status varchar2(4),
+	name varchar2(50)
+);
+
+-----------------------------
+
+create table ChatMessages 
+(
+	sender 		varchar2(50),
+	receiver 	varchar2(50),
+	message 	varchar2(500),
+	time 		timestamp,
+	status 		varchar2(1)
+);
+
+create table ChatStudent
+(
+	name 		varchar2(50),
+	emailid 		varchar2(50),
+	password 	varchar2(10),
+	status 		varchar2(1)
+);
+
+--------------------------------
+
+create table Subject
+(
+	subjectid 	varchar2(50),
+	subjectname 	varchar2(50),
+	teacherregdno varchar2(50),
+	semester varchar2(50),
+	branch       varchar2(50)
+);
+
+------------------------------------
+delete from teacherfeedback;
+delete from studentfeedback;
+delete from teacher;
+delete from teacherleave;
+delete from studentleave;
+delete from contact;
+delete from studentattendance;
